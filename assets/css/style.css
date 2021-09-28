@@ -1,0 +1,9 @@
+header {
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, rgb(27, 88, 255) , rgb(36, 13, 119));
+}
+
+form input,button {
+    width: 100%;
+}

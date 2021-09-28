@@ -12,17 +12,17 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <section>
-        <aside>
+    <section class="d-flex p-2">
+        <aside class="col-3 d-inline-flex">
             <form>
                 <h2>Search for a City:</h2>
                 <input type="text" id="citySearch" name="citySearch" value="Toronto">
-                <input type="submit" value="Submit">
+                <button type="submit" class="btn btn-primary my-2">Search</button>
             </form>
             <br>
             <div id="history"></div>
         </aside>
-        <main>
+        <main class="col-9">
             <div id="current"></div>
             <div id="5 day">
                 <h4>5-Day Forecast:</h4>
