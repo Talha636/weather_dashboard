@@ -34,13 +34,20 @@ search.addEventListener('click', function() {
 
 function showCurrentInfo(info) {
     let h4El = document.querySelector('h4');
-    let imgEl = document.createElement('img');
     let uvi = info.current.uvi;
-    let icon = info.current.weather[0].icon;
-    console.log(icon);
-    imgEl.src = 'http://openweathermap.org/img/wn/' + icon + '.png';
-    h4El.innerText = (info.timezone + '  (' + moment().format('MMMM Do, YYYY')) + ')'; // + imgEl);
+    // let icon = info.current.weather[0].icon;
+    // console.log(icon);
+    // document.querySelector('.icon').style.src = 'http://openweathermap.org/img/wn/' + icon + '.png';
+    h4El.innerText = (info.timezone + '  (' + moment().format('MMMM Do, YYYY')) + ')';
     let pEl = document.querySelector('p');
     pEl.innerHTML = ('Temp: ' + info.current.temp + '°C' + '<br />' + 'Wind: ' + info.current.wind_speed + ' m/s' + '<br />' + 'Humidity: ' + info.current.humidity + ' %' + '<br />' + 'UV Index: ' + uvi);
 };
 
+function futureDate() {
+    document.getElementById('future1').innerText = moment().add(1, 'd').format('MMMM Do, YYYY');
+    document.getElementById('future2').innerText = moment().add(2, 'd').format('MMMM Do, YYYY');
+    document.getElementById('future3').innerText = moment().add(3, 'd').format('MMMM Do, YYYY');
+    document.getElementById('future4').innerText = moment().add(4, 'd').format('MMMM Do, YYYY');
+    document.getElementById('future5').innerText = moment().add(5, 'd').format('MMMM Do, YYYY');
+}
+futureDate();
