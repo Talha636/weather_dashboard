@@ -13,22 +13,26 @@
         <h1>Weather Dashboard</h1>
     </header>
     <section class="d-flex p-2">
-        <aside class="col-3 d-inline-flex">
+        <aside class="col-3">
             <form>
                 <h2>Search for a City:</h2>
-                <input type="text" id="citySearch" name="citySearch" value="Toronto">
-                <button type="submit" class="btn btn-primary my-2">Search</button>
+                <input type="text" id="citySearch" name="citySearch" value="toronto">
+                <button type="submit" id="btn" class="btn btn-primary my-2">Search</button>
             </form>
-            <br>
+            <hr>
             <div id="history"></div>
         </aside>
-        <main class="col-9">
-            <div id="current"></div>
+        <main class="col-9 p-2">
+            <div class="border border-dark p-2">
+                <h4 id="current"><span id="icon"></span></h4>
+                <p id="temp"></p>
+            </div>
             <div id="5 day">
                 <h4>5-Day Forecast:</h4>
             </div>
         </main>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
