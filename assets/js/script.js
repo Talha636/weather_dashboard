@@ -45,6 +45,13 @@ function showCurrentInfo(info) {
     document.querySelector('#wind').innerHTML = info.current.wind_speed;
     document.querySelector('#humidity').innerHTML = info.current.humidity;
     document.querySelector('#uvi').innerHTML = info.current.uvi;
+    if (info.current.uvi <= 2) {
+        uvi.classList = 'green';
+    } else if (info.current.uvi > 2 && info.current.uvi <= 5) {
+        uvi.classList = 'yellow';
+    } else {
+        uvi.classList = 'red';
+    }
 }
 
 function futureDate() {
