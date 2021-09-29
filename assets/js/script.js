@@ -12,6 +12,7 @@ search.addEventListener('click', function() {
     button.innerText = (cities);
     button.classList.add('btn-primary', 'btn', 'my-2');
     historyList.appendChild(button);
+    //add button values
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIkey}`)
     .then(function(response) {
@@ -38,9 +39,9 @@ search.addEventListener('click', function() {
 
 function showCurrentInfo(info) {
     document.querySelector('#current').innerHTML = info.timezone + '(' + moment().format('MMMM Do, YYYY') + ')';
-    // let icon0 = info.current.weather[0].icon;
-    // console.log(icon0);
-    // document.querySelector('#icon').src = 'http://openweathermap.org/img/wn/' + icon0 + '.png';
+    let icon = info.current.weather[0].icon;
+    console.log(icon);
+    document.querySelector('#icon').src = `http://openweathermap.org/img/wn/${icon}.png`;
     document.querySelector('#temp').innerHTML = info.current.temp;
     document.querySelector('#wind').innerHTML = info.current.wind_speed;
     document.querySelector('#humidity').innerHTML = info.current.humidity;

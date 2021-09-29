@@ -25,3 +25,7 @@ form input,button {
     padding: 2px;
     border-radius: 2px;
 }
+
+#current {
+    display: inline;
+}
