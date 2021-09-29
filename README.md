@@ -26,3 +26,4 @@ https://talha636.github.io/weather_dashboard/
 
 ## Screenshot
 
+<img width="1440" alt="Screen Shot 2021-09-29 at 01 36 58" src="https://user-images.githubusercontent.com/85548877/135209389-61ca76e9-ed64-4b05-b009-0bc96cc5bfd7.png">
